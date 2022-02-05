@@ -1,5 +1,5 @@
 class Room:
-    def __init__(self):
-        self.RoomNumber = None
-        self.RoomId = None
-        self.RoomStatus = None
+    def __init__(self, roomNumber, roomStatus, roomId):
+        self.RoomNumber = roomNumber
+        self.RoomStatus = roomStatus
+        self.RoomId = roomId
