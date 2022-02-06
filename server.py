@@ -86,7 +86,7 @@ def VacateRoom():
 def MarkRoomAvailable():
     global BoutiqueHotelObj
     if not request.json and 'roomNumber' not in request.json:
-        return jsonify({'result', 'Invalid Room Number, This room can not be vacate at the movement.'})
+        return jsonify({'result', 'Invalid Room Number, This room can not be available at the movement.'})
     roomNumber = request.json['roomNumber']
     return jsonify({'result':BoutiqueHotelObj.MarkRoomAvailable(roomNumber)})
 
@@ -94,7 +94,7 @@ def MarkRoomAvailable():
 def MarkRoomToRepair():
     global BoutiqueHotelObj
     if not request.json and 'roomNumber' not in request.json:
-        return jsonify({'result', 'Invalid Room Number, This room can not be vacate at the movement.'})
+        return jsonify({'result', 'Invalid Room Number, This room can not be repaired at the movement.'})
     roomNumber = request.json['roomNumber']
     return jsonify({'result':BoutiqueHotelObj.MarkRoomToRepair(roomNumber)})
 
