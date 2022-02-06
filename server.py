@@ -99,5 +99,7 @@ def MarkRoomToRepair():
     return jsonify({'result':BoutiqueHotelObj.MarkRoomToRepair(roomNumber)})
 
 if __name__ == '__main__':
-    BoutiqueHotelObj = BoutiqueHotel(4,5)
+    floorCount = 4
+    roomCountOnEachFloor = 5
+    BoutiqueHotelObj = BoutiqueHotel(floorCount, roomCountOnEachFloor)
     app.run(host='0.0.0.0', port=8000)
